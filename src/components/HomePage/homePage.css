@@ -1,0 +1,175 @@
+html {
+   /* height: 100%; */
+    font-family:sans-serif;
+    color:#4a4a4a;
+  }
+
+body {
+    /* height: 100%; */
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.822);
+  }
+
+/*h1 {
+    margin: 0;
+    padding: 0;
+  } */
+
+  h1 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family:'Pacifico', cursive;
+    font-size: 30px;
+    color: #212121;
+    }
+
+p {
+    padding: 0;
+    margin: 0 0 1.45rem;
+    font-size: 18px;
+    line-height: 1.8em;
+    font-family: Open-Sans, sans-serif;
+  }
+
+a {
+    text-decoration: none;
+    color: #000000;
+    transition: all .15s ease-in-out;
+  }
+
+a:hover {
+    text-decoration: none;
+  } 
+
+ /* HOME PAGE */
+
+/* Homepage header */
+.header {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+ }
+
+.header__link {
+    color: #212121;
+    text-decoration: none;
+ }
+
+.header__logo {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 38px;
+    margin-left: 30px;
+ }
+
+.menu {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    font-size: 1.1em
+  }
+
+.menu__item {
+    color: #9fa7a7;
+    text-decoration: none
+  }
+
+.menu>li {
+    margin: 8px 0;
+    padding: 0 20px
+  }
+
+  @media (min-width:790px) {
+      .header {
+      flex-direction: row;
+  }
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 67%;
+    top: 106px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.0);
+    z-index: 4;
+    cursor: pointer;
+  }
+
+.overlay-text {
+    color: rgb(246, 252, 255);
+    font-size: 1.5em;
+  }
+
+.responsive {
+    width: 100%;
+    height: 43rem;
+  }
+
+@media screen and (max-width: 600px) {
+    #overlay {
+      top: 140px;
+      height: 55%
+    }
+    .overlay-text {
+      font-size: 0.9em;
+    }
+    .responsive {
+      height: 30rem;
+    }
+  }
+
+@media screen and (width: 1024px) {
+    #overlay {
+      top: 72px;
+      height: 50%;
+    }
+  }
+
+@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-height: 414px) {
+    .overlay-text {
+      font-size: 25px;
+    }
+  }
+  
+#text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-size: 40px;
+    color: rgb(233, 244, 255);
+    transform: translate(-50%,-50%);
+  }
+
+.copyright_footer {
+    color: #BBB;
+    font-size: 13px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+.copyright_footer a {
+    color: #000;
+  }
+  
+.copyright_footer--content {
+    text-align: center;
+  }
