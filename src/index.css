@@ -1,167 +1,165 @@
-html, body {
-    height: 100%
-  }
-  
-   html {
-      font-family:sans-serif;
-      color:#4a4a4a
-  } 
-  
-  body {
-    width: 100%; 
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.822);
-  }
-  h1 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #000000;
-    transition: all .15s ease-in-out;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  } 
+html,
+body {
+  height: 100%;
+}
 
-  .responsive {
-    width: 100%;
-    height: 43rem;
-  }
+html {
+  font-family: sans-serif;
+  color: #4a4a4a;
+}
 
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.822);
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.15s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.responsive {
+  width: 100%;
+  height: 43rem;
+}
+
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 67%;
+  top: 106px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 4;
+  cursor: pointer;
+}
+.overlay-text {
+  color: rgb(246, 252, 255);
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
   #overlay {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 67%;
-    top: 106px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.0);
-    z-index: 4;
-    cursor: pointer;
+    top: 140px;
+    height: 55%;
   }
   .overlay-text {
-    color: rgb(246, 252, 255);
-    font-size: 1.5em;
+    font-size: 0.9em;
   }
-
-  @media screen and (max-width: 600px) {
-    #overlay {
-      top: 140px;
-      height: 55%
-    }
-    .overlay-text {
-      font-size: 0.9em;
-    }
-    .responsive {
-      height: 30rem;
-    }
+  .responsive {
+    height: 30rem;
   }
+}
 
-  @media screen and (width: 1024px) {
-    #overlay {
-      top: 72px;
-      height: 50%;
-    }
+@media screen and (width: 1024px) {
+  #overlay {
+    top: 72px;
+    height: 50%;
   }
+}
 
-  @media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-height: 414px) {
-    .overlay-text {
-      font-size: 25px;
-    }
+@media (orientation: portrait) and (max-width: 414px),
+  (orientation: landscape) and (max-height: 414px) {
+  .overlay-text {
+    font-size: 25px;
   }
+}
 
+#text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  font-size: 40px;
+  color: rgb(233, 244, 255);
+  transform: translate(-50%, -50%);
+}
 
-  
-  #text{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    font-size: 40px;
-    color: rgb(233, 244, 255);
-    transform: translate(-50%,-50%);
-  }
-  
+/* HOME PAGE */
 
-  /* HOME PAGE */
-  
-  /* Homepage header */
+/* Homepage header */
+.header {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1px 20px 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+}
+.header__link {
+  color: #212121;
+  text-decoration: none;
+}
+.header__logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 38px;
+  margin-left: 30px;
+}
+.intro {
+  padding: 0;
+  margin: 0 0 1.45rem;
+  font-size: 37px;
+  line-height: 1.3em;
+  font-family: Open-Sans, sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 1.45rem;
+  font-size: 18px;
+  line-height: 1.8em;
+  font-family: Open-Sans, sans-serif;
+}
+
+@media (min-width: 790px) {
   .header {
-    margin-top:0;
-    margin-bottom:0;
-    padding: 1px 20px 0;
-    display:flex;
-    justify-content:space-between;
-    overflow:hidden;
-    align-items:center;
-    flex-direction:column
+    flex-direction: row;
   }
-  .header__link {
-    color:#212121;
-    text-decoration:none
-  }
-  .header__logo {
-    margin-top:0;
-    margin-bottom:0;
-    font-family:'Pacifico', cursive;
-    font-size: 38px;
-    margin-left: 30px;
-  }
-  .intro {
-    padding:0;
-    margin:0 0 1.45rem;
-    font-size:37px;
-    line-height:1.3em;
-    font-family: Open-Sans, sans-serif;
-  }
-  
-  p {
-    padding:0;
-    margin:0 0 1.45rem;
-    font-size:18px;
-    line-height:1.8em;
-    font-family: Open-Sans, sans-serif;
-  }
-  
-  @media (min-width:790px)
-  {.header {
-      flex-direction:row;
-  }
-  }
-  
-  .menu {
-    height:100%;
-    list-style:none;
-    margin:0;
-    display:flex;
-    font-size:1.1em
-  }
-  .menu__item {
-    color:#9fa7a7;
-    text-decoration:none
-  }
-  .menu__item--selected {
-    text-decoration:underline;
-    color:#212121
-  }
-  .menu__button {
-    background:none;
-    border:none
-  } 
-  .menu>li {
-    margin:8px 0;
-    padding:0 20px
-  }
+}
 
+.menu {
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  font-size: 1.1em;
+}
+.menu__item {
+  color: #9fa7a7;
+  text-decoration: none;
+}
+.menu__item--selected {
+  text-decoration: underline;
+  color: #212121;
+}
+.menu__button {
+  background: none;
+  border: none;
+}
+.menu > li {
+  margin: 8px 0;
+  padding: 0 20px;
+}
 
-  /* Registration Page */
+/* Registration Page */
 
 /* Signup */
 /* .e-err {
@@ -187,39 +185,40 @@ html, body {
 /* Header - Signup*/
 
 h1 {
-width: 100%;
-height: 100%;
-font-family:'Pacifico', cursive;
-font-size: 30px;
-color: #212121;
+  width: 100%;
+  height: 100%;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: #212121;
 }
 
 .app_signup_header_logo {
-height: 32px;
-padding-top: 9px;
+  height: 32px;
+  padding-top: 9px;
 }
 .app_signup_header_container {
-display: flex;
-justify-content: flex-start;
-margin-top: 10px;
-background: #fff;
-width: 100%;
-/* min-height: 62px; */
-height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  background: #fff;
+  width: 100%;
+  /* min-height: 62px; */
+  height: 50px;
 }
 .app_signup_header_outside {
-margin: 0 auto;
+  margin: 0 auto;
 }
-@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-height: 414px) {
-    .app_signup_header_logo {
-        height: 32px;
-        padding-top: 15px;
-        float: none;
-    }
-    .app_signup_header_outside {
-        max-width: none;
-        min-width: 0;
-    }
+@media (orientation: portrait) and (max-width: 414px),
+  (orientation: landscape) and (max-height: 414px) {
+  .app_signup_header_logo {
+    height: 32px;
+    padding-top: 15px;
+    float: none;
+  }
+  .app_signup_header_outside {
+    max-width: none;
+    min-width: 0;
+  }
 }
 
 /* Modal */
@@ -278,7 +277,7 @@ margin: 0 auto;
 
 .app_signup_signup_sheet_media_container {
   font-family: Open Sans, Helvetica, Arial, EmojiFontFace, sans-serif;
-} 
+}
 
 .app_signup_signup_sheet_content_container {
   margin-left: auto;
@@ -287,8 +286,8 @@ margin: 0 auto;
   max-width: 510px;
 }
 
-
-@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-height: 414px) {
+@media (orientation: portrait) and (max-width: 414px),
+  (orientation: landscape) and (max-height: 414px) {
   .app_signup_signup_sheet_content_container {
     width: auto;
   }
@@ -314,18 +313,18 @@ margin: 0 auto;
 } */
 
 .signup_signup_button {
-    width: 80%;
-    margin-top: 14px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #212121;
-    background-color: #42a5f5;
-    height: 40px;
-    border-radius: 5px;
+  width: 80%;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #212121;
+  background-color: #42a5f5;
+  height: 40px;
+  border-radius: 5px;
 }
 
 .signup_signup_button:hover {
-    background-color: #64b5f6;
+  background-color: #64b5f6;
 }
 
 button {
@@ -342,7 +341,8 @@ button:hover {
   background-color: #64b5f6;
 }
 
-@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-height: 414px) {
+@media (orientation: portrait) and (max-width: 414px),
+  (orientation: landscape) and (max-height: 414px) {
   .app_signup_signup_sheet_info_message {
     min-height: 48px;
     font-weight: bold;
@@ -361,17 +361,17 @@ button:hover {
   margin-right: auto;
 }
 
-.SignupTabContainer__tab--basic {
+/*.SignupTabContainer__tab--basic {
   border-top-left-radius: 2px;
   box-shadow: inset 8px 4px 0 #fff;
-}
+} */
 
 .SignupTabContainer__form {
-    flex-grow: 1;
-    box-shadow: 0 0 2px #fff, 0 0 5px #888;
-    padding: 16px 32px;
-    min-height: 501px;
-} 
+  flex-grow: 1;
+  box-shadow: 0 0 2px #fff, 0 0 5px #888;
+  padding: 16px 32px;
+  min-height: 501px;
+}
 
 .app_signup_signup_sheet_signup_form {
   display: flex;
@@ -384,40 +384,41 @@ button:hover {
 
 .app_signup_text_input_outer {
   width: 100%;
-} 
+}
 
 input.app_signup_text_input_input {
-    width: 100%;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 11px;
-    background-color: #FAFAFA;
-    border-radius: 2px;
-    margin-bottom: 7px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #DCDCDC;
-} 
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 11px;
+  background-color: #fafafa;
+  border-radius: 2px;
+  margin-bottom: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dcdcdc;
+}
 input.app_signup_text_input_input::placeholder {
-    color: #BBB;
+  color: #bbb;
 }
 input.app_signup_text_input_input--with-errors {
-    background: #FFEEEE;
-    border-color: #DF716E;
+  background: #ffeeee;
+  border-color: #df716e;
 }
-@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-height: 414px) {
-    .app_signup_text_input_input {
-        margin-bottom: 12px;
-        margin-top: 6px;
-    }
+@media (orientation: portrait) and (max-width: 414px),
+  (orientation: landscape) and (max-height: 414px) {
+  .app_signup_text_input_input {
+    margin-bottom: 12px;
+    margin-top: 6px;
+  }
 }
 .app_signup_text_input_label {
-    font-weight: 300;
-    text-align: left;
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 1px 0 1px 0;
+  font-weight: 300;
+  text-align: left;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 1px 0 1px 0;
 }
 
 .app_signup_text_input_label_text {
@@ -436,17 +437,17 @@ input.app_signup_text_input_input--with-errors {
 } */
 
 .app_signup_input_select_input {
-    width: 100%;
-    height: 45px;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 11px;
-    background-color: #FAFAFA;
-    border-radius: 2px;
-    margin-bottom: 7px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #DCDCDC;
+  width: 100%;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 11px;
+  background-color: #fafafa;
+  border-radius: 2px;
+  margin-bottom: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dcdcdc;
 }
 
 /* Consents - Sign up */
@@ -467,7 +468,7 @@ input.app_signup_text_input_input--with-errors {
   margin-bottom: 8px;
 }
 
-.app_signup_consents_checkbox{
+.app_signup_consents_checkbox {
   margin-left: -8px;
 }
 
@@ -477,7 +478,7 @@ input.app_signup_text_input_input--with-errors {
 }
 
 .consents__Checkbox:hover {
-  background-color: #E9F4FF;
+  background-color: #e9f4ff;
 }
 
 /* Sign in - Sign up*/
@@ -488,7 +489,7 @@ input.app_signup_text_input_input--with-errors {
   font-weight: 400;
   color: #5f5f5f;
   padding-right: 12px;
- /* margin-bottom: 60px; */
+  /* margin-bottom: 60px; */
   margin-top: 14px;
   display: flex;
   justify-content: center;
@@ -513,7 +514,7 @@ input.app_signup_text_input_input--with-errors {
 }
 
 .copyright_footer {
-  color: #BBB;
+  color: #bbb;
   font-size: 13px;
   height: 42px;
   display: flex;
@@ -530,7 +531,8 @@ input.app_signup_text_input_input--with-errors {
   text-align: center;
 }
 
-@media (orientation: portrait) and (max-width: 414px), (orientation: landscape) and (max-height: 414px) {
+@media (orientation: portrait) and (max-width: 414px),
+  (orientation: landscape) and (max-height: 414px) {
   .copyright_footer {
     font-size: 11px;
     padding: 0 25px;
@@ -541,7 +543,7 @@ input.app_signup_text_input_input--with-errors {
 /* Password reset footer */
 
 .copyright_reset_footer {
-  color: #BBB;
+  color: #bbb;
   font-size: 12px;
   height: 42px;
   display: flex;
@@ -568,10 +570,10 @@ input.app_signup_text_input_input--with-errors {
 }
 
 .SigninTabContainer__form {
-    flex-grow: 1;
-    box-shadow: 0 0 2px #fff, 0 0 5px #888;
-    padding: 16px 32px;
-    min-height: 304px;
+  flex-grow: 1;
+  box-shadow: 0 0 2px #fff, 0 0 5px #888;
+  padding: 16px 32px;
+  min-height: 304px;
 }
 
 @media screen and (max-width: 600px) {
@@ -602,7 +604,7 @@ input.app_signup_text_input_input--with-errors {
   input.app_signin_text_input_input {
     font-size: 25px;
     padding: 20px;
-    width: 100%
+    width: 100%;
   }
   button {
     font-size: 26px;
@@ -624,13 +626,13 @@ input.app_signin_text_input_input {
   font-size: 14px;
   font-weight: 300;
   padding: 11px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 2px;
   margin-bottom: 7px;
   border-style: solid;
   border-width: 1px;
-  border-color: #DCDCDC;
-} 
+  border-color: #dcdcdc;
+}
 
 .app_signin_forgot_password {
   font-size: 15px;
@@ -681,7 +683,7 @@ input.app_signin_text_input_input {
   margin: 0;
   box-sizing: border-box;
   transition: all 0.2s ease-in;
-} 
+}
 
 .row {
   padding: 0 5px;
@@ -707,8 +709,8 @@ input.app_signin_text_input_input {
 #site-main .aside {
   display: flex;
   margin-top: 20px;
-  background: 	#f6faf8; 
-  box-shadow: 0px 1.2px 8.2px rgba(0, 0, 0, 0.03); 
+  background: #f6faf8;
+  box-shadow: 0px 1.2px 8.2px rgba(0, 0, 0, 0.03);
   overflow-x: scroll;
 }
 
@@ -752,12 +754,11 @@ input.app_signin_text_input_input {
   background: #85bbff;
 }
 
-
 #site-main .main {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 10px;
-} 
+}
 
 @media (min-width: 1023px) {
   #site-main .main {
@@ -776,8 +777,8 @@ input.app_signin_text_input_input {
 @media (min-width: 1023px) {
   #site-main .main .summary {
     display: flex;
-    align-items: flex-start; 
-  flex-direction: row; 
+    align-items: flex-start;
+    flex-direction: row;
   }
 }
 
@@ -786,12 +787,12 @@ input.app_signin_text_input_input {
   border-radius: 15px;
   margin-bottom: 10px;
   margin-left: 45px;
-  margin-right: 10px; 
+  margin-right: 10px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background: linear-gradient(100deg, #f1f1f1 50%, #f5f5f5 50%);
   display: flex;
   justify-content: space-between;
-  
+
   padding: 5px;
 }
 
@@ -808,7 +809,7 @@ input.app_signin_text_input_input {
 
 #site-main .main .summary__card .details .header1 {
   padding-top: 10px;
-  font-size: 0.8rem
+  font-size: 0.8rem;
 }
 
 #site-main .main .summary__card .details .value {
@@ -826,11 +827,11 @@ input.app_signin_text_input_input {
 }
 
 #site-main .main .summary__card .icon.white {
- background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 #site-main .main .summary__card .icon.green {
-  background: #e8f5e9; 
+  background: #e8f5e9;
 }
 
 #site-main .main .summary__card .icon img {
@@ -844,8 +845,8 @@ input.app_signin_text_input_input {
 
 @media (min-width: 1023px) {
   #site-main .main .summary .admin-political {
-  width: 100%;
-      }
+    width: 100%;
+  }
 }
 
 #site-main .main .political__meta {
@@ -873,12 +874,11 @@ input.app_signin_text_input_input {
   overflow-y: unset;
 }
 
-
 #site-main .main .political__table {
   width: 100%;
   margin-bottom: 10px;
   border-collapse: collapse;
-  box-shadow: 0px 1.2px 8.2px rgba(0, 0, 0, 0.03); 
+  box-shadow: 0px 1.2px 8.2px rgba(0, 0, 0, 0.03);
 }
 
 #site-main .main .political__table thead {
@@ -889,7 +889,7 @@ input.app_signin_text_input_input {
 
 @media (min-width: 1023px) {
   #site-main .main .political__table thead {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -903,14 +903,13 @@ input.app_signin_text_input_input {
   background: #2c363b;
 }
 
-
 #site-main .main .political__table tbody {
   font-size: 0.8rem;
 }
 
 @media (min-width: 1023px) {
   #site-main .main .political__table tbody {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -951,16 +950,15 @@ input.app_signin_text_input_input {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
   }
 }
 #site-main .main .political__meta .add-new {
-    flex-grow: 1;
-    box-shadow: 0 0 2px #fff, 0 0 5px #888;
-    padding: 16px 32px;
-    min-height: 301px;
+  flex-grow: 1;
+  box-shadow: 0 0 2px #fff, 0 0 5px #888;
+  padding: 16px 32px;
+  min-height: 301px;
 }
-
 
 #site-main .main .political__meta .add-new .sort-add {
   max-width: 360px;
@@ -999,8 +997,12 @@ input.app_signin_text_input_input {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .err_container {
@@ -1019,13 +1021,13 @@ input.app_signin_text_pol_input_input {
   font-size: 14px;
   font-weight: 300;
   padding: 11px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 2px;
   margin-bottom: 7px;
   border-style: solid;
   border-width: 1px;
-  border-color: #DCDCDC;
-} 
+  border-color: #dcdcdc;
+}
 
 .add-party-button {
   width: 80%;
@@ -1043,7 +1045,6 @@ input.app_signin_text_pol_input_input {
   background-color: #64b5f6;
 }
 
-
 #site-main .main .political__meta fieldset {
   padding: 5px;
   margin-bottom: 10px;
@@ -1053,20 +1054,18 @@ input.app_signin_text_pol_input_input {
   font-size: 1.1rem;
 }
 
-
-
 #site-main .main .political__meta fieldset .search-input {
   width: 100%;
   margin-bottom: 5px;
   padding: 12px;
   font-size: 14px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 2px;
   margin-bottom: 7px;
   border-style: solid;
   border-width: 1px;
-  border-color: #DCDCDC;
-} 
+  border-color: #dcdcdc;
+}
 
 #site-main .main .political__meta fieldset button {
   width: 80%;
@@ -1084,12 +1083,13 @@ input.app_signin_text_pol_input_input {
   padding: 3px;
   margin-bottom: 5px;
   width: 360px;
-  height: 41px; background-color: #FAFAFA;
+  height: 41px;
+  background-color: #fafafa;
   border-radius: 2px;
   margin-bottom: 7px;
   border-style: solid;
   border-width: 1px;
-  border-color: #DCDCDC;
+  border-color: #dcdcdc;
 }
 
 #site-main .main .political__meta fieldset .filter-record {
@@ -1097,12 +1097,12 @@ input.app_signin_text_pol_input_input {
   margin-bottom: 5px;
   width: 240px;
   height: 41px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 2px;
   margin-bottom: 7px;
   border-style: solid;
   border-width: 1px;
-  border-color: #DCDCDC;
+  border-color: #dcdcdc;
 }
 
 @media (min-width: 2023px) {
@@ -1111,18 +1111,18 @@ input.app_signin_text_pol_input_input {
     font-size: 1.1rem;
     width: auto;
   }
-} 
+}
 
 /* Political Party Buttons */
 #site-main .main .political__meta .create__party__button {
-width: 25%;
-margin-top: 32px;
-margin-bottom: 16px;
-font-size: 16px;
-color: #212121;
-background-color: #42a5f5;
-height: 43px;
-border-radius: 5px;
+  width: 25%;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #212121;
+  background-color: #42a5f5;
+  height: 43px;
+  border-radius: 5px;
 }
 
 #site-main .main .political__meta .create__party__button {
@@ -1134,7 +1134,7 @@ border-radius: 5px;
   background-color: #42a5f5;
   height: 43px;
   border-radius: 5px;
-  }
+}
 
 #site-main .main .political__table tbody button {
   width: 60px;
@@ -1153,7 +1153,8 @@ border-radius: 5px;
   background: #4297ff;
   color: #fff;
 }
-#site-main .main .political input[type='submit'], #site-main .main .political input[type='button'] {
+#site-main .main .political input[type='submit'],
+#site-main .main .political input[type='button'] {
   padding: 12px 45px;
   border: none;
   background: #42a5f5;
@@ -1163,7 +1164,8 @@ border-radius: 5px;
 }
 
 @media (min-width: 2023px) {
-  #site-main .main .political input[type='submit'], #site-main .main .political input[type='button'] {
+  #site-main .main .political input[type='submit'],
+  #site-main .main .political input[type='button'] {
     padding: 10px 10px;
   }
 }
@@ -1191,7 +1193,7 @@ border-radius: 5px;
   color: #000;
 }
 
- /*.toast_msg {
+/*.toast_msg {
   position: fixed;
   right: 50%;
   width: 70%;
@@ -1209,7 +1211,7 @@ border-radius: 5px;
   height: 57px;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #90EE90;
+  background-color: #90ee90;
   text-align: center;
   border-radius: 2px;
   padding: 18px;
