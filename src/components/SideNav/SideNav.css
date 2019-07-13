@@ -1,0 +1,48 @@
+.aside {
+    display: flex;
+    margin-top: 20px;
+    background: #f6faf8;
+    box-shadow: 0px 1.2px 8.2px rgba(0, 0, 0, 0.03);
+    overflow-x: scroll;
+  }
+  
+  @media (min-width: 1023px) {
+     .aside {
+      width: 20%;
+      display: block;
+      overflow-x: unset;
+    }
+  }
+  
+.aside__nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  @media (min-width: 1023px) {
+ .aside__nav ul {
+      display: block;
+    }
+  }
+  
+.aside__nav ul li a {
+    display: block;
+    padding: 15px 15px;
+    color: #2c363b;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+.aside__nav ul li a:hover {
+    background: #dcebff;
+  }
+  
+.aside__nav ul li a.selected {
+    background: #90c1ff;
+    color: #000;
+  }
+  
+.aside__nav ul li a.selected:hover {
+    background: #85bbff;
+  }

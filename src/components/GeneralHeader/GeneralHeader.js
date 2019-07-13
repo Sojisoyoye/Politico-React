@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomeHeader.css';
 
-const Header = () => {
+ const GeneralHeader = () => {
     return (
         <div className="header">
         <Link className="header__link" to="/">
@@ -11,10 +10,7 @@ const Header = () => {
         <section>
           <ul className="menu">
             <li><Link className="menu__item" to="/">
-              sign up
-            </Link></li>
-            <li><Link className="menu__item" to="/">
-              sign in
+              sign out
             </Link></li>
           </ul>
         </section>
@@ -22,4 +18,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+ export default GeneralHeader;
