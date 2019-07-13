@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './GeneralHeader.css';
 
- const GeneralHeader = () => {
+const GeneralHeader = () => {
     return (
         <div className="header">
         <Link className="header__link" to="/">
@@ -9,13 +10,15 @@ import { Link } from 'react-router-dom';
         </Link>
         <section>
           <ul className="menu">
-            <li><Link className="menu__item" to="/">
+          <li>
+            <Link className="menu__item" to="/">
               sign out
-            </Link></li>
+            </Link>
+            </li>
           </ul>
         </section>
       </div> 
     );
-}
+} 
 
- export default GeneralHeader;
+export default GeneralHeader;

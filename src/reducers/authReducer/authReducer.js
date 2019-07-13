@@ -1,11 +1,10 @@
 import { USER_SIGNUP_SUCCESS, USER_LOGIN_SUCCESS, USER_LOGIN_ERROR, USER_SIGNUP_ERROR } from '../../actions/authActions/authActions';
 
 const token = localStorage.getItem('token');
-const isAdmin = localStorage.getItem('isAdmin');
 
 const initialState = {
     isAuthenticated: Boolean(token),
-    isAdmin: isAdmin,
+    isAdmin: 'false',
     loginErrors: [],
     signupErrors: []
 }

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as authActions from '../../actions/authActions/authActions';
@@ -40,9 +41,16 @@ class SigninForm extends Component {
 
     render() {
         const {
-            auth: { isAdmin, loginErrors }
+            auth: { isAuthenticated, isAdmin, loginErrors }
         } = this.props;
-
+        
+            if (isAuthenticated) {
+                if (isAdmin === 'false') {
+                  return <Redirect to="/dashboard" />;
+                }
+                return <Redirect to="/adminpage" />;
+              }
+        
         return (
             <Fragment>
                 <div className="app_signup_signup_sheet_media_container">
@@ -111,7 +119,8 @@ class SigninForm extends Component {
 SigninForm.propTypes = {
     signinUser: PropTypes.func.isRequired,
     auth: PropTypes.shape({
-        isAdmin: PropTypes.bool,
+        isAdmin: PropTypes.string,
+        isAuthenticated: PropTypes.bool,
         loginErrors: PropTypes.array
     }).isRequired,
     clearLoginErrors: PropTypes.func.isRequired
