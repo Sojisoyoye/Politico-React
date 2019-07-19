@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import * as authActions from '../../actions/authActions/authActions';
 
-import { addUser } from '../../actions/AddUserAction';
+import './SignupForm.css';
+import ErrorDisplay from '../ErrorDisplay/ErrorDisplay';
 
-import './Form.css';
-
-class Form extends Component {
+class SignupForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,15 +26,18 @@ class Form extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        const { addUser } = this.props
+        const { signupUser } = this.props
         const form = document.querySelector('form');
         const formData = new FormData(form);
     
-        // call action
-        addUser(formData); 
+        signupUser(formData); 
     }
 
     render() {
+        const {
+            auth: { signupErrors }
+        } = this.props;
+
         return (
             <Fragment>
                 <div className="app_signup_signup_sheet_media_container">
@@ -47,7 +50,7 @@ class Form extends Component {
                 <form
                     className="app_signup_signup_sheet_signup_form"
                     onSubmit={this.onSubmit}
-                >
+                >{signupErrors.length ? <ErrorDisplay errors={signupErrors} /> : null}
                     <div className="app_signup_text_input_outer">
                         <label>
                             <div className="app_signup_text_input_label">
@@ -169,11 +172,17 @@ class Form extends Component {
     }
 };
 
-Form.propTypes = {
-    addUser: PropTypes.func.isRequired
-  };
+const mapStateToProp = state => ({
+    auth: state.auth
+})
+
+SignupForm.propTypes = {
+    signupUser: PropTypes.func.isRequired
+};
+  
+const mapActionsToProp = { signupUser: authActions.signupUser };
 
 export default connect(
-    null,
-    { addUser }
-  )(Form);
+    mapStateToProp,
+    mapActionsToProp
+  )(SignupForm);

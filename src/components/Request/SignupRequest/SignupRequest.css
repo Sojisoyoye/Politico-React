@@ -1,0 +1,16 @@
+.app_signup_sheet_signin {
+    font-family: Open Sans, Helvetica, Arial, EmojiFontFace, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #5f5f5f;
+    padding-right: 12px;
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+  }
+  
+.app_signup_signup_sheet_signin_link {
+color: #000;
+text-decoration: none;
+margin-left: 4px;
+}

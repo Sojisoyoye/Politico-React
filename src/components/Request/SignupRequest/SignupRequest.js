@@ -1,16 +1,16 @@
 import React from 'react';
-import './SigninRequest.css';
+import './SignupRequest.css';
 
-const SigninRequest = () => (
+const SignupRequest = () => (
     <div className="app_signup_sheet_signin">
-                  Already have an account?
+                  Don't have an account?
                   <a
                     href="signin.html"
                     className="app_signup_signup_sheet_signin_link"
                   >
-                    Sign In
+                    Sign Up
                   </a>
                 </div>
 )
 
-export default SigninRequest;
+export default SignupRequest;
