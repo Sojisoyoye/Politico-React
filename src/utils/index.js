@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-export const apiInstance = axios.create({
-  baseURL: 'https://app-politico.herokuapp.com/api/v1/'
+export const instance = axios.create({
+  baseURL: 'https://app-politico.herokuapp.com/api/v1'
 });
 
 export default class Util {
-  static makeRequest(url, options = { method: 'GET' }) {
-    return apiInstance({
+  static reqProcess(url, options = { method: 'GET' }) {
+    return instance({
       url,
       method: options.method,
       data: options.body,
