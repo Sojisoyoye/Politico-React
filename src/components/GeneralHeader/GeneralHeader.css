@@ -1,0 +1,47 @@
+.header {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .header__link {
+    color: #212121;
+    text-decoration: none;
+  }
+  
+  .header__logo {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 38px;
+    margin-left: 30px;
+  }
+  
+  .menu {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    font-size: 1.1em;
+  }
+  
+  .menu__item {
+    color: #9fa7a7;
+    text-decoration: none;
+  }
+  
+  .menu > li {
+    margin: 8px 0;
+    padding: 0 20px;
+  }
+  
+  @media (min-width: 790px) {
+    .header {
+      flex-direction: row;
+    }
+  }

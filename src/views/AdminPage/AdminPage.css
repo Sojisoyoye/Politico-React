@@ -1,0 +1,20 @@
+.row {
+    padding: 0 5px;
+  }
+  
+  @media (min-width: 1023px) {
+    .row {
+      padding: 0 15px;
+    }
+  }
+  
+.site-main {
+    flex: 1;
+  }
+  
+  @media (min-width: 1023px) {
+    .site-main {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
