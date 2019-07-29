@@ -10,10 +10,10 @@ const Header = () => {
         </Link>
         <section>
           <ul className="menu">
-            <li><Link className="menu__item" to="/">
+            <li><Link className="menu__item" to="/signup">
               sign up
             </Link></li>
-            <li><Link className="menu__item" to="/">
+            <li><Link className="menu__item" to="/signin">
               sign in
             </Link></li>
           </ul>

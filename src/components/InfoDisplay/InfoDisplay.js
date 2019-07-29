@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import officeIcon from '../../assets/img/icons8-office-80.png';
 import resumeIcon from '../../assets/img/icons8-resume-80.png';
 import groupIcon from '../../assets/img/icons8-user-groups-480.png';
-import './AdminInfoDisplay.css';
+import './InfoDisplay.css';
 
- export class AdminInfoDisplay extends Component {
+export class InfoDisplay extends Component {
     render() {
         return (
-        <div className="main">
-        <section className="summary">
+            <div className="main">
+            <section className="summary">
           <div className="summary__card">
             <div className="details">
-              <p className="header">Total Political Parties</p>
+              <p className="header1">All Political Parties</p>
               <h2 className="value">91</h2>
             </div>
             <div className="icon green">
@@ -19,16 +19,16 @@ import './AdminInfoDisplay.css';
           </div>
           <div className="summary__card">
             <div className="details">
-              <p className="header">Total Government Offices</p>
-              <h2 className="value">93</h2>
+              <p className="header1">Total Offices Voted</p>
+              <h2 className="value">0</h2>
             </div>
             <div className="icon white">
             <img src={officeIcon} alt="office-icon" /></div>
           </div>
           <div className="summary__card">
             <div className="details">
-              <p className="header">Total Candidates</p>
-              <h2 className="value">593</h2>
+              <p className="header1">Total Candidates Candidates</p>
+              <h2 className="value">0</h2>
             </div>
             <div className="icon green">
             <img src={resumeIcon} alt="candidate-icon" /></div>
@@ -39,28 +39,28 @@ import './AdminInfoDisplay.css';
         <div className="summary">
           <div className="admin-political">
             <div className="political__meta">
-              <h3>Recently Added Political Party</h3>
+              <h3 className="header1">My Vote History</h3>
             </div>
             <div className="table-wrapper no-flow">
               <table className="political__table">
                 <thead>
                   <tr>
-                    <th>Party ID</th>
-                    <th>Party Name</th>
-                    <th>HQ Address</th>
-                    <th>Logo</th>
-                    <th>Party Acroymn</th>
+                    <th>ID</th>
+                    <th>Office Name</th>
+                    <th>Candidate</th>
+                    <th>Political Party</th>
                   </tr>
                 </thead>
                 <tbody>
-
-                 </tbody>
+                    
+                </tbody>
               </table>
             </div>
           </div>
         </div>
-        </section>
-      </div>
+      </section>
+
+            </div>
         )
     }
 }
