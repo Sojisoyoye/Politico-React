@@ -4,6 +4,7 @@ import HomePage from '../views/HomePage/HomePage';
 import SignupPage from '../views/SignupPage/SignupPage';
 import SigninPage from '../views/SigninPage/SigninPage';
 import AdminPage from '../views/AdminPage/AdminPage';
+import UserDashBoardPage from '../views/UserDashBoardPage/UserDashBoardPage';
 
 const Routes = () => (
   <>
@@ -13,6 +14,7 @@ const Routes = () => (
               <Route exact path="/signup" component={SignupPage} />
               <Route exact path="/signin" component={SigninPage} />
               <Route exact path="/adminpage" component={AdminPage} />
+              <Route exact path="/dashboard" component={UserDashBoardPage} />
             </Switch>
     </BrowserRouter>
   </>

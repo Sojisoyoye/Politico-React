@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import GeneralHeader from '../../components/GeneralHeader/GeneralHeader';
-import { AdminInfoDisplay } from '../../components/AdminInfoDisplay/AdminInfoDisplay';
+import AdminInfoDisplay from '../../components/AdminInfoDisplay/AdminInfoDisplay';
 import SideNav from '../../components/SideNav/SideNav';
 import Footer from '../../components/Footer/Footer';
 import './AdminPage.css';

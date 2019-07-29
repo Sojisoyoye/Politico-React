@@ -5,6 +5,7 @@ export const USER_SIGNUP_ERROR = 'USER_SIGNUP_ERROR';
 export const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS';
 export const USER_LOGIN_ERROR = 'USER_LOGIN_FAILED';
 export const CLEAR_LOGIN_ERRORS = 'CLEAR_LOGIN_ERRORS';
+export const USER_SIGN_OUT = 'USER_SIGN_OUT';
 
 export const userSignupError = (error, message) => ({
     type: USER_SIGNUP_ERROR,
@@ -68,5 +69,14 @@ export const signinUser = userData => async dispatch => {
     } catch (err) {
         const { error, message } = err.response.data;
         dispatch(userLoginError(error, message));
+    }
+}
+
+export const signoutUser = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('isAdmin');
+    return {
+        type: USER_SIGN_OUT,
+        payload: { isAuthenticated: false }
     }
 }
