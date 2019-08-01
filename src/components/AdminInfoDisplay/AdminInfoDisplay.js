@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getParties }from '../../actions/partyActions/partyActions';
 import officeIcon from '../../assets/img/icons8-office-80.png';
 import resumeIcon from '../../assets/img/icons8-resume-80.png';
 import groupIcon from '../../assets/img/icons8-user-groups-480.png';
 import './AdminInfoDisplay.css';
 
- export class AdminInfoDisplay extends Component {
-    render() {
+class AdminInfoDisplay extends Component {
+  componentDidMount() {
+    this.props.getParties();
+  } 
+
+  render() {
+    const { parties } = this.props.party;
+
         return (
         <div className="main">
         <section className="summary">
@@ -49,11 +57,19 @@ import './AdminInfoDisplay.css';
                     <th>Party Name</th>
                     <th>HQ Address</th>
                     <th>Logo</th>
-                    <th>Party Acroymn</th>
                   </tr>
                 </thead>
                 <tbody>
-
+                        {parties.map((party, index) => {
+                          return (
+                          <tr key={index}>
+                            <td>{party.id}</td>
+                            <td>{party.name}</td>
+                            <td>{party.hqaddress}</td>
+                            <td><img src={party.logourl} alt={party.name} /></td>
+                        </tr>
+                  )
+                })}
                  </tbody>
               </table>
             </div>
@@ -63,4 +79,10 @@ import './AdminInfoDisplay.css';
       </div>
         )
     }
-}
+ }
+
+const mapStateToProp = ({ party }) => ({
+  party: party,
+})
+
+export default connect(mapStateToProp, { getParties })(AdminInfoDisplay);

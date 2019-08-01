@@ -11,7 +11,7 @@ export default class Util {
       method: options.method,
       data: options.body,
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('user')}`
+        authorization: `Bearer ${localStorage.getItem('token')}`
       }
     }).then(response => response.data);
   }

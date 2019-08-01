@@ -1,16 +1,16 @@
 import React from 'react';
 
-const TableData = ({ voteHistory: [] }) => {
-    voteHistory ? (
+const TableData = ({ partyContent: [] }) => {
+    partyContent ? (
         <tr>
-            <td>You have not voted yet.</td>
+            <td>No party available at the moment.</td>
         </tr>
-    ) : ( voteHistory.map((vote, index) => {
+    ) : ( partyContent.map((party, index) => {
         <tr key={index}>
-            <td>{vote.id}</td>
-            <td>{vote.officeName}</td>
-            <td>{vote.candidate}</td>
-            <td>{vote.party}</td>
+            <td>{party.id}</td>
+            <td>{party.name}</td>
+            <td>{party.hqaddress}</td>
+            <td><img src={party.logourl} alt={party.name} /></td>
         </tr>
     })
     )
