@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start-dev": "NODE_ENV=development webpack-dev-server --open --hot --mode development",
-    "build": "webpack --mode production",
+    "start": "node app.js",
+    "start-dev": "NODE_ENV=development rm -rf dist && webpack-dev-server --open --hot --mode development",
+    "build": "NODE_ENV=production rm -rf dist && webpack --mode production",
+    "heroku-postbuild": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "precommit": "lint-staged"
@@ -24,6 +26,9 @@
   "homepage": "https://github.com/Sojisoyoye/Politico-React#readme",
   "dependencies": {
     "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",

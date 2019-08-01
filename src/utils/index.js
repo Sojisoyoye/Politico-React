@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const instance = axios.create({
-  baseURL: 'https://app-politico.herokuapp.com/api/v1'
+  baseURL: 'api/v1'
 });
 
 export default class Util {
