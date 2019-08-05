@@ -1,8 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { signoutUser } from '../../actions/authActions/authActions';
 import './GeneralHeader.css';
 
 const GeneralHeader = () => {
+    const signOut = () => {
+        signoutUser();
+    }
+    
     return (
         <div className="header">
         <Link className="header__link" to="/">
@@ -11,9 +17,9 @@ const GeneralHeader = () => {
         <section>
           <ul className="menu">
           <li>
-            <Link className="menu__item" to="/">
+            <a onClick={signOut} className="menu__item" href="/">
               sign out
-            </Link>
+            </a>
             </li>
           </ul>
         </section>
@@ -21,4 +27,4 @@ const GeneralHeader = () => {
     );
 } 
 
-export default GeneralHeader;
+export default connect(null, { signoutUser })(GeneralHeader);
