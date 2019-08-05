@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as authActions from '../../actions/authActions/authActions';
@@ -35,8 +36,15 @@ class SignupForm extends Component {
 
     render() {
         const {
-            auth: { signupErrors }
+            auth: { isAuthenticated, isAdmin, signupErrors }
         } = this.props;
+        
+        if (isAuthenticated) {
+            if (isAdmin === 'false') {
+                return <Redirect to="/dashboard" />;
+            }
+            return <Redirect to="/adminpage" />;
+        }
 
         return (
             <Fragment>
@@ -177,7 +185,12 @@ const mapStateToProp = state => ({
 })
 
 SignupForm.propTypes = {
-    signupUser: PropTypes.func.isRequired
+    signupUser: PropTypes.func.isRequired,
+    auth: PropTypes.shape({
+        isAdmin: PropTypes.string,
+        isAuthenticated: PropTypes.bool,
+        signupErrors: PropTypes.array
+    }).isRequired,
 };
   
 const mapActionsToProp = { signupUser: authActions.signupUser };
