@@ -55,6 +55,7 @@ export class InfoDisplay extends Component {
                     
                 </tbody>
               </table>
+            <p>You have no vote history at the moment</p>
             </div>
           </div>
         </div>
