@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Sojisoyoye/Politico-React.svg?branch=develop)](https://travis-ci.org/Sojisoyoye/Politico-React)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d4405a355929fc007405/maintainability)](https://codeclimate.com/github/Sojisoyoye/Politico-React/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d4405a355929fc007405/maintainability)](https://codeclimate.com/github/Sojisoyoye/Politico-React/maintainability) [![Coverage Status](https://coveralls.io/repos/github/Sojisoyoye/Politico-React/badge.svg?branch=develop)](https://coveralls.io/github/Sojisoyoye/Politico-React?branch=develop)
 
 # Politico
 
