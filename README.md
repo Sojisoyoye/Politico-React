@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/d4405a355929fc007405/maintainability)](https://codeclimate.com/github/Sojisoyoye/Politico-React/maintainability)
+
 # Politico
 
 A platform for both the politicians and citizens, which enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency.
