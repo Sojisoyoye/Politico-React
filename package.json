@@ -4,7 +4,8 @@
   "description": "A platform for both the politicians and citizens, which enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "start": "node app.js",
     "start-dev": "NODE_ENV=development webpack-dev-server --open --hot --mode development",
     "build": "NODE_ENV=production rm -rf dist && webpack --mode production",
@@ -42,6 +43,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.0.0",
+    "coveralls": "^3.0.5",
     "css-loader": "^2.1.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",

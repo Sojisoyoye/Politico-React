@@ -6,7 +6,10 @@ cache:
   - node_modules
 
 script:
-  - npm test
+  - npm test -- -u --coverage
 
 install:
 - npm install -q --no-color --no-progress
+
+after_script:
+ - npm run coveralls 
