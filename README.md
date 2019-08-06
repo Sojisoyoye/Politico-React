@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Sojisoyoye/Politico-React.svg?branch=develop)](https://travis-ci.org/Sojisoyoye/Politico-React)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d4405a355929fc007405/maintainability)](https://codeclimate.com/github/Sojisoyoye/Politico-React/maintainability)
 
 # Politico
